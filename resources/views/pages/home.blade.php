@@ -112,7 +112,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6 mb-4 d-flex">
                     <div class="card h-100 w-100">
                         @if($product->images->count() > 0)
-                            <img src="{{ asset('uploads/' . $product->images->first()->url) }}" 
+                            <img src="{{ asset($product->images->first()->url) }}" 
                                  class="card-img-top" 
                                  alt="{{ $product->name }}"
                                  style="height: 200px; object-fit: cover;">
@@ -205,12 +205,12 @@
                         <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
                             <div class="card h-100 product-card">
                                 @if($product->primary_image)
-                                    <img src="{{ asset('uploads/' . $product->primary_image) }}" 
+                                    <img src="{{ asset($product->primary_image) }}" 
                                          class="card-img-top" 
                                          alt="{{ $product->name }}"
                                          style="height: 200px; object-fit: cover;">
                                 @elseif($product->images->count() > 0)
-                                    <img src="{{ asset('uploads/' . $product->images->first()->url) }}" 
+                                    <img src="{{ asset($product->images->first()->url) }}" 
                                          class="card-img-top" 
                                          alt="{{ $product->name }}"
                                          style="height: 200px; object-fit: cover;">
